@@ -15,9 +15,7 @@ const Modal: React.FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
   const [month, setMonth] = useState("");
   const [year, setYear] = useState("");
 
-
   const isButtonEnabled = day && month && year;
-  
 
   const calculateAge = () => {
 

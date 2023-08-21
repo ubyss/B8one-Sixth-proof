@@ -1,8 +1,9 @@
-import React from 'react'
-import { products } from './../../../__mocks__/mockProducts.js'
+import { getProducts } from './../../../__mocks__/mockApis.js'
 import ProductCard from './ProductCard/index.js'
 
 const Shelf = () => {
+
+    const products = getProducts()
 
   return (
     <div className="shelf__content">

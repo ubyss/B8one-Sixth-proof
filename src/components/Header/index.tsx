@@ -1,11 +1,16 @@
+import {useState} from 'react';
 import logo from '../../assets/logo.svg';
 import minicartIcon from '../../assets/minicart_icon.svg';
 import accountIcon from '../../assets/account_icon.svg';
 import searchIcon from '../../assets/search_icon.svg';
 import CategorySection from './CategorySection';
 import DiscountBanner from '../DiscountBanner';
+import MiniCart from './Minicart';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+
     return (
         <>
         <div className="header">
@@ -23,13 +28,17 @@ const Header = () => {
                 Acessar minha conta
             </div>
             <div className="cart-section">
-                <button>
+                <button onClick={() => setIsOpen(true)}>
                     <img className="cart-section__icon" src={minicartIcon} alt="Grocery.Store Logo" />
                 </button>
             </div>
         </div>
         <CategorySection />
         <DiscountBanner />
+        <MiniCart 
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            />
         </>
     );
 }

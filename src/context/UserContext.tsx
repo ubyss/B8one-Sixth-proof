@@ -1,9 +1,13 @@
 import {useEffect, useState} from 'react'
 import React, { createContext, useContext } from 'react';
+import { MinicartItem } from '../interfaces/IProducts';
+
 
 interface UserContextProps {
   isOver65: boolean,
   setIsOver65: (bool: boolean) => void
+  minicart: MinicartItem[]
+  setMinicart: React.Dispatch<React.SetStateAction<MinicartItem[]>>
 }
 
 const UserContext = createContext<UserContextProps | undefined>(undefined);
@@ -11,14 +15,16 @@ const UserContext = createContext<UserContextProps | undefined>(undefined);
 export const UserProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   const [isOver65, setIsOver65] = useState(false);
+  const [minicart, setMinicart] = useState<MinicartItem[]>([]);
+
 
   useEffect(() => {  
-    console.log('@@', isOver65);
+    console.log('@@', minicart);
 
-  }, [isOver65])
+  }, [minicart])
 
   return (
-    <UserContext.Provider value={{ setIsOver65, isOver65 }}>
+    <UserContext.Provider value={{ setIsOver65, isOver65, minicart, setMinicart }}>
       {children}
     </UserContext.Provider>
   );

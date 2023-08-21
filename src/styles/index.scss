@@ -225,7 +225,6 @@ line-height: 24px; /* 150% */
 
     &__list{
         display: flex;
-        padding: var(--radius-rounded-none, 0px) var(--spacing-9, 48px);
         justify-content: center;
         align-items: center;
         color: var(--text-slate-600, #475569);
@@ -234,14 +233,19 @@ line-height: 24px; /* 150% */
         font-style: normal;
         font-weight: 500;
         line-height: 20px; /* 142.857% */
-        padding: 18px 24px;
-        gap: 24px;
-        margin: 0 48px;
+        padding: 18px 48px;
+        gap: 48px;
     }
 
     &__item{
-        width: 100%;
+        width: fit-content;
         cursor: pointer;
+        height: 56px;
+
+        &:hover{
+            border-bottom: 1.5px solid var(--border-blue-600, #2563EB);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.75) 100%);
+        }
     }
   }
 
@@ -371,7 +375,7 @@ margin-top: auto;
         font-style: normal;
         font-weight: 500;
         line-height: 16px; /* 133.333% */
-        margin-top: 12px;
+        margin: 12px 0;
     }
 
     &__list-price--crossed {
@@ -480,3 +484,134 @@ margin-top: auto;
 
     }
 }
+
+/* styles.css */
+  
+  .minicart{
+    &__overlay {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+     &__content {
+        z-index: 20;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 360px;
+        height: 100%;
+        background-color: #fff;
+        border-radius: var(--radius-rounded-none, 0px);
+background: var(--bg-slate-100, #F1F5F9);
+box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.20);
+      }
+
+      &__header{
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        border-radius: var(--radius-rounded-none, 0px);
+background: var(--bg-slate-white, #FFF);
+margin-bottom: 1rem;
+
+        &-title{
+            color: var(--text-slate-900, #0F172A);
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px; /* 133.333% */
+            flex: 1 0 0;
+        }
+      }
+
+      &__items{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+
+      }
+
+      &-product-card{
+        display: flex;
+        border-radius: var(--radius-rounded-md, 8px);
+        background: var(--bg-slate-white, #FFF);
+        display: flex;
+        width: 328px;
+        padding: var(--spacing-5, 16px);
+        align-items: flex-start;
+        gap: var(--spacing-5, 16px);
+        width: calc(100% - 4rem);
+        margin: 0 auto;
+        height: 100px;
+
+        &__image{
+            width: var(--size-11, 56px);
+            height: var(--size-11, 56px);
+        }
+
+        &__name{
+            color: var(--text-slate-900, #0F172A);
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px; /* 133.333% */
+        }
+
+        &__right-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            height: 100%;
+          }
+          &__details {
+            font-size: 16px;
+            color: var(--text-slate-900, #0F172A);
+          }
+
+          &__actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: .5rem;
+
+            &__delete-button {
+              cursor: pointer;
+            }
+        }
+
+        &__price {
+            color: var(--text-slate-900, #0F172A);
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 20px; /* 142.857% */
+              flex: 1 0 0;
+          }
+          
+          &__quantity-selector {
+            border-radius: var(--radius-rounded-md, 8px);
+            border: 1px solid var(--border-slate-300, #CBD5E1);
+            background: var(--bg-slate-white, #FFF);
+            padding: 10px 16px;
+            color: var(--text-slate-600, #475569);
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            width: 80px;
+        }
+      }
+  }
+
+
+  
