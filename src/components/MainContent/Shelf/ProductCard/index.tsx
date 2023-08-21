@@ -33,6 +33,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           name: product.name,
           units,
           price: priceForSelectedWeight,
+          seller: product.seller,
         };
     
         setMinicart((prevMinicart) => [...prevMinicart, newItem]);
@@ -63,12 +64,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
             <p className="product-card__promotion">Compre 3 leve 2!</p>
             <label className="product-card__label">Selecione o peso</label>
-            <select className="product-card__select" onChange={handleWeightChange} value={selectedWeight}>
-                <option value="" disabled>Selecione</option>
-                {weightOptions.map((weight, index) => (
-                    <option key={index} value={weight}>{`${weight} gramas`}</option>
-                ))}
-            </select>
+            <label className="select-wrapper">
+                <select className="product-card__select" onChange={handleWeightChange} value={selectedWeight}>
+                    <option value="" disabled>Selecione</option>
+                    {weightOptions.map((weight, index) => (
+                        <option key={index} value={weight}>{`${weight} gramas`}</option>
+                    ))}
+                </select>
+            </label>
             <button className="product-card__button" disabled={isButtonDisabled} onClick={addToCart}>Adicionar</button>
         </div>
     );

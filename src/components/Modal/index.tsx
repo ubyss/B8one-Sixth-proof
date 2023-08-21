@@ -8,7 +8,7 @@ type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
-  
+
   const { setIsOver65 } = useUser();
 
   const [day, setDay] = useState("");
@@ -19,8 +19,8 @@ const Modal: React.FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
 
   const calculateAge = () => {
 
-    if(!isButtonEnabled) return null
-    
+    if (!isButtonEnabled) return null
+
     const birthDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
     const today = new Date();
     const age = today.getFullYear() - birthDate.getFullYear();
@@ -43,24 +43,30 @@ const Modal: React.FC<ModalProps> = ({ isModalOpen, setIsModalOpen }) => {
         <h2 className="modal__title">Olá! Que bom te ver aqui.</h2>
         <h2 className="modal__notify">Para continuar, informe a sua data de nascimento</h2>
         <div className="modal__select-group">
-          <select className="modal__select" onChange={(e) => setDay(e.target.value)} value={day}>
-            <option value="" disabled>Dia</option>
-            {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
-              <option key={d} value={d}>{d}</option>
-            ))}
-          </select>
-          <select className="modal__select" onChange={(e) => setMonth(e.target.value)} value={month}>
-            <option value="" disabled>Mês</option>
-            {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
-              <option key={m} value={m}>{m}</option>
-            ))}
-          </select>
-          <select className="modal__select" onChange={(e) => setYear(e.target.value)} value={year}>
-            <option value="" disabled>Ano</option>
-            {Array.from({ length: 76 }, (_, i) => 1946 + i).map((y) => (
-              <option key={y} value={y}>{y}</option>
-            ))}
-          </select>
+          <label className="select-wrapper">
+            <select className="modal__select" onChange={(e) => setDay(e.target.value)} value={day}>
+              <option value="" disabled>Dia</option>
+              {Array.from({ length: 31 }, (_, i) => i + 1).map((d) => (
+                <option key={d} value={d}>{d}</option>
+              ))}
+            </select>
+          </label>
+          <label className="select-wrapper">
+            <select className="modal__select" onChange={(e) => setMonth(e.target.value)} value={month}>
+              <option value="" disabled>Mês</option>
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                <option key={m} value={m}>{m}</option>
+              ))}
+            </select>
+          </label>
+          <label className="select-wrapper">
+            <select className="modal__select" onChange={(e) => setYear(e.target.value)} value={year}>
+              <option value="" disabled>Ano</option>
+              {Array.from({ length: 76 }, (_, i) => 1946 + i).map((y) => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
+          </label>
         </div>
         <button className={`modal__button ${!isButtonEnabled ? 'modal__button--disabled' : 'modal__button--enabled'}`} disabled={!isButtonEnabled} onClick={calculateAge}>
           Acessar loja

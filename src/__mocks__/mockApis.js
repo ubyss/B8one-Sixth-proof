@@ -12,5 +12,3 @@ export function getBanners() {
 export function getSeniorDiscount() {
     return seniorDiscont
 }
-
-

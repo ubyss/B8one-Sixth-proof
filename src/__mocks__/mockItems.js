@@ -17,6 +17,7 @@ export const products = [
         listPrice: 1.50,
         quantityPerWeight: '150g',
         weightInStock: '10kg',
+        seller: 'Quitanda da Maria',
     },
     {
         id: 2,
@@ -26,6 +27,7 @@ export const products = [
         listPrice: 1.00,
         quantityPerWeight: '150g',
         weightInStock: '12kg',
+        seller: 'Bananas do João',
     },
     {
         id: 3,
@@ -35,6 +37,7 @@ export const products = [
         listPrice: 0.90,
         quantityPerWeight: '200g',
         weightInStock: '8kg',
+        seller: 'Frutas Frescas',
     },
     {
         id: 4,
@@ -44,6 +47,7 @@ export const products = [
         listPrice: 1.30,
         quantityPerWeight: '180g',
         weightInStock: '9kg',
+        seller: 'Mercado Verde',
     },
     {
         id: 5,
@@ -53,6 +57,7 @@ export const products = [
         listPrice: 2.80,
         quantityPerWeight: '800g',
         weightInStock: '5kg',
+        seller: 'Frutas Tropicais',
     },
     {
         id: 6,
@@ -62,6 +67,7 @@ export const products = [
         listPrice: 2.20,
         quantityPerWeight: '200g',
         weightInStock: '6kg',
+        seller: 'Hortifruti Express',
     },
     {
         id: 7,
@@ -71,6 +77,7 @@ export const products = [
         listPrice: 1.70,
         quantityPerWeight: '250g',
         weightInStock: '7kg',
+        seller: 'Tropical Frutas',
     },
     {
         id: 8,
@@ -80,6 +87,7 @@ export const products = [
         listPrice: 3.50,
         quantityPerWeight: '1kg',
         weightInStock: '4kg',
+        seller: 'Mercado Central',
     },
     {
         id: 9,
@@ -89,6 +97,7 @@ export const products = [
         listPrice: 2.50,
         quantityPerWeight: '300g',
         weightInStock: '5kg',
+        seller: 'Empório das Frutas',
     },
     {
         id: 10,
@@ -98,6 +107,7 @@ export const products = [
         listPrice: 2.00,
         quantityPerWeight: '100g',
         weightInStock: '3kg',
+        seller: 'Feira Orgânica',
     },
 ];
 

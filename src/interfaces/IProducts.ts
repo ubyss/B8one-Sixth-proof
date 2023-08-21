@@ -4,6 +4,7 @@ export interface MinicartItem {
     name: string;
     units: number;
     price: number;
+    seller: string
   }
 
   export type Product = {
@@ -14,4 +15,5 @@ export interface MinicartItem {
     listPrice: number;
     quantityPerWeight: string;
     weightInStock: string;
+    seller: string
   };
