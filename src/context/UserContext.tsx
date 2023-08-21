@@ -1,23 +1,24 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import React, { createContext, useContext } from 'react';
 
 interface UserContextProps {
-  test: string
+  isOver65: boolean,
+  setIsOver65: (bool: boolean) => void
 }
 
 const UserContext = createContext<UserContextProps | undefined>(undefined);
 
 export const UserProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  
-  const test = 'dwdw'
 
+  const [isOver65, setIsOver65] = useState(false);
 
   useEffect(() => {  
+    console.log('@@', isOver65);
 
-  }, [])
+  }, [isOver65])
 
   return (
-    <UserContext.Provider value={{ test }}>
+    <UserContext.Provider value={{ setIsOver65, isOver65 }}>
       {children}
     </UserContext.Provider>
   );
