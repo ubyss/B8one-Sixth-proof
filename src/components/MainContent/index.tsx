@@ -1,14 +1,29 @@
 import React from 'react';
 import BenefitsBar from '../BenefitsBar';
-
-import fullBanner from './../../assets/full-banner.png'
 import Shelf from './Shelf';
 
-const MainContent: React.FC = ({  }) => {
+import { getBanners } from './../../__mocks__/mockApis'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+
+interface Banner {
+  imageUrl: string;
+}
+
+const MainContent: React.FC = ({ }) => {
+  const banners = getBanners()
+
+
   return (
     <div className="main-content">
-        <img src={fullBanner} alt="full banner" className="main-content--full-banner"/>
-
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      {banners.map((banner: Banner, index: number) => (
+        <SwiperSlide key={index}>
+          <img src={banner.imageUrl} alt="banner image" className="main-content--full-banner" />
+        </SwiperSlide>
+      ))}
+      </Swiper>
       <BenefitsBar />
       <Shelf />
     </div>

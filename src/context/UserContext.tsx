@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import React, { createContext, useContext } from 'react';
 import { MinicartItem } from '../interfaces/IProducts';
+import { getSeniorDiscount } from '../__mocks__/mockApis.js'
 
 
 interface UserContextProps {
@@ -8,6 +9,7 @@ interface UserContextProps {
   setIsOver65: (bool: boolean) => void
   minicart: MinicartItem[]
   setMinicart: React.Dispatch<React.SetStateAction<MinicartItem[]>>
+  seniorDiscont: number
 }
 
 const UserContext = createContext<UserContextProps | undefined>(undefined);
@@ -17,14 +19,10 @@ export const UserProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
   const [isOver65, setIsOver65] = useState(false);
   const [minicart, setMinicart] = useState<MinicartItem[]>([]);
 
-
-  useEffect(() => {  
-    console.log('@@', minicart);
-
-  }, [minicart])
+  const seniorDiscont = getSeniorDiscount()
 
   return (
-    <UserContext.Provider value={{ setIsOver65, isOver65, minicart, setMinicart }}>
+    <UserContext.Provider value={{ setIsOver65, isOver65, minicart, setMinicart, seniorDiscont }}>
       {children}
     </UserContext.Provider>
   );

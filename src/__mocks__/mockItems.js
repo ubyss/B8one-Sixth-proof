@@ -1,4 +1,12 @@
-export const banners = []
+import banner1 from './../assets/full-banner.png'
+import banner2 from './../assets/full-banner-2.png'
+
+export const banners = [{
+    imageUrl: banner1,
+},
+{
+    imageUrl: banner2,
+}]
 
 export const products = [
     {
@@ -92,3 +100,5 @@ export const products = [
         weightInStock: '3kg',
     },
 ];
+
+export const seniorDiscont = 0.9

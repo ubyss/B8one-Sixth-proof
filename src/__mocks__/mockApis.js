@@ -1,5 +1,4 @@
-import { products } from "./mockItems";
-import { banners } from "./mockItems";
+import { products, banners, seniorDiscont } from "./mockItems";
 
 
 export function getProducts() {
@@ -10,5 +9,8 @@ export function getBanners() {
     return banners
 }
 
+export function getSeniorDiscount() {
+    return seniorDiscont
+}
 
 

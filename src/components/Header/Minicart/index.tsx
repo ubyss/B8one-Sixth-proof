@@ -13,7 +13,8 @@ type MiniCartProps = {
 
 const MiniCart: React.FC<MiniCartProps> = ({ isOpen, setIsOpen }) => {
 
-  const { minicart } = useUser();
+  const { minicart, isOver65, seniorDiscont } = useUser();
+
 
   const handleClose = () => {
     setIsOpen(false);
@@ -22,6 +23,8 @@ const MiniCart: React.FC<MiniCartProps> = ({ isOpen, setIsOpen }) => {
   if (!isOpen) {
     return null;
   }
+
+  const subtotal = isOver65 ? minicart.reduce((acc, item) => acc + item.price, 0) * seniorDiscont : minicart.reduce((acc, item) => acc + item.price, 0);
 
   return ReactDOM.createPortal(
     <>
@@ -38,6 +41,13 @@ const MiniCart: React.FC<MiniCartProps> = ({ isOpen, setIsOpen }) => {
             <MinicartProductCard product={item} key={index} />
           ))}
         </div>
+        <div className="minicart__summary">
+        <div className="minicart__subtotal-container">
+          <span className="minicart__subtotal-text">Subtotal</span>
+          <span className="minicart__subtotal-value">R$ {subtotal.toFixed(2)}</span>
+        </div>
+        <button className="minicart__goto-cart-button">Ir para o carrinho</button>
+      </div>
       </div>
     </>,
     document.body
