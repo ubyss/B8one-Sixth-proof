@@ -200,7 +200,6 @@ line-height: 24px; /* 150% */
     border-radius: var(--radius-rounded-none, 0px);
     background: var(--color-green-300, #86EFAC);
     display: flex;
-    width: 100%;
     height: 48px;
     padding: var(--radius-rounded-none, 0px) var(--spacing-9, 48px);
     justify-content: center;
@@ -242,8 +241,242 @@ line-height: 24px; /* 150% */
 
     &__item{
         width: 100%;
-        padding: 0 24px;
         cursor: pointer;
     }
   }
 
+  .main-content{
+
+    &--full-banner{
+        margin: 16px auto;
+        border-radius: 3px;
+        width: 100%;
+    }
+
+
+  .benefits-bar {
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem auto;
+      padding-bottom: 2rem;      
+      border-radius: var(--radius-rounded-none, 0px);
+      border-bottom: 1px solid var(--border-slate-200, #E2E8F0);
+      width: calc(100% - 3rem);
+    }
+  
+    &__item {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__icon {
+      margin-right: 10px;
+    }
+  
+    &__text {
+      color: var(--text-slate-600, #475569);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+    }
+  }
+}
+
+.footer-content{
+    border-radius: var(--radius-rounded-none, 0px);
+background: var(--bg-slate-100, #F1F5F9);
+display: flex;
+padding: var(--spacing-6, 24px) var(--spacing-9, 48px);
+justify-content: center;
+align-items: center;
+gap: var(--radius-rounded-none, 0px);
+color: var(--text-slate-600, #475569);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; 
+margin-top: auto;
+}
+
+.shelf {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 3rem);
+      margin: 32px auto;
+    }
+  
+    &__text {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 2rem;
+      
+  
+      &-title {
+        color: var(--text-slate-900, #0F172A);
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px; /* 133.333% */
+      }
+  
+      &-description {
+        color: var(--text-slate-600, #475569);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+      }
+    }
+  
+    &__products-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        overflow-x: scroll;
+        gap: 24px;
+    }
+  }
+
+
+.product-card {
+    border-radius: var(--radius-rounded-md, 8px);
+    border: 1px solid var(--border-slate-200, #E2E8F0);
+    background: var(--bg-slate-white, #FFF);
+    display: flex;
+    width: 204px;
+    padding: 16px;
+    flex-direction: column;
+
+    &__image {
+        width: 172px;
+        height: 172px;
+        margin: 0 auto;
+    }
+
+    &__name {
+        color: var(--text-slate-900, #0F172A);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 133.333% */
+        margin-top: 12px;
+    }
+
+    &__list-price--crossed {
+        color: var(--text-slate-600, #475569);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        text-decoration-line: line-through;
+    }
+
+    &__price-container{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__price {
+        color: var(--text-slate-900, #0F172A);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 150% */
+
+        &--discount{
+            border-radius: var(--radius-rounded, 4px);
+            background: var(--bg-rose-200, #FECDD3);
+            padding: var(--spacing-1, 2px) var(--spacing-2, 4px);
+            color: var(--text-slate-900, #0F172A);
+            font-family: Inter;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 16px; /* 145.455% */
+        }
+    }
+
+    &__discount {
+    font-size: 12px;
+    color: #ff0000;
+    }
+
+    &__promotion {
+        color: var(--text-green-700, #15803D);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 133.333% */
+    }
+
+    &__label {
+        color: var(--text-slate-900, #0F172A);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 133.333% */
+        margin-top: .75rem;
+        margin-bottom: .5rem;
+    }
+
+    &__select {
+        border-radius: var(--radius-rounded-md, 8px);
+        border: 1px solid var(--border-slate-300, #CBD5E1);
+        background: var(--bg-slate-white, #FFF);
+        padding: 10px 16px;
+        color: var(--text-slate-600, #475569);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+    }
+
+    &__button {
+        border-radius: var(--radius-rounded-md, 8px);
+        background: var(--bg-blue-600, #2563EB);
+        padding: 10px 32px;
+        color: var(--text-slate-white, #FFF);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px; /* 142.857% */
+        cursor: pointer;
+        margin-top: .75rem;
+
+    &:disabled {
+        border-radius: var(--radius-rounded-md, 8px);
+        background: var(--bg-slate-100, #F1F5F9);
+        color: var(--text-slate-500, #64748B);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+        }
+
+        &:not([disabled]):hover{
+            border-radius: var(--radius-rounded-md, 8px);
+            background: var(--bg-blue-800, #1E40AF);
+        }
+
+    }
+}

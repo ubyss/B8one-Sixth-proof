@@ -3,6 +3,7 @@ import minicartIcon from '../../assets/minicart_icon.svg';
 import accountIcon from '../../assets/account_icon.svg';
 import searchIcon from '../../assets/search_icon.svg';
 import CategorySection from './CategorySection';
+import DiscountBanner from '../DiscountBanner';
 
 const Header = () => {
     return (
@@ -28,6 +29,7 @@ const Header = () => {
             </div>
         </div>
         <CategorySection />
+        <DiscountBanner />
         </>
     );
 }

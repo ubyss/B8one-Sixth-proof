@@ -1,8 +1,8 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: 'Maçã',
-        imageUrl: 'https://example.com/apple.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 1.20,
         listPrice: 1.50,
         isWeighable: true,
@@ -10,7 +10,7 @@ const products = [
     {
         id: 2,
         name: 'Banana',
-        imageUrl: 'https://example.com/banana.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 0.80,
         listPrice: 1.00,
         isWeighable: true,
@@ -18,7 +18,7 @@ const products = [
     {
         id: 3,
         name: 'Leite',
-        imageUrl: 'https://example.com/milk.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 2.50,
         listPrice: 3.00,
         isWeighable: false,
@@ -26,7 +26,7 @@ const products = [
     {
         id: 4,
         name: 'Arroz',
-        imageUrl: 'https://example.com/rice.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 1.70,
         listPrice: 2.00,
         isWeighable: true,
@@ -34,7 +34,7 @@ const products = [
     {
         id: 5,
         name: 'Pão',
-        imageUrl: 'https://example.com/bread.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 1.00,
         listPrice: 1.20,
         isWeighable: false,
@@ -42,7 +42,7 @@ const products = [
     {
         id: 6,
         name: 'Café',
-        imageUrl: 'https://example.com/coffee.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 3.50,
         listPrice: 4.00,
         isWeighable: false,
@@ -50,7 +50,7 @@ const products = [
     {
         id: 7,
         name: 'Carne',
-        imageUrl: 'https://example.com/meat.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 5.00,
         listPrice: 6.00,
         isWeighable: true,
@@ -58,7 +58,7 @@ const products = [
     {
         id: 8,
         name: 'Frango',
-        imageUrl: 'https://example.com/chicken.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 4.50,
         listPrice: 5.00,
         isWeighable: true,
@@ -66,7 +66,7 @@ const products = [
     {
         id: 9,
         name: 'Ovos',
-        imageUrl: 'https://example.com/eggs.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 2.20,
         listPrice: 2.50,
         isWeighable: false,
@@ -74,7 +74,7 @@ const products = [
     {
         id: 10,
         name: 'Azeite',
-        imageUrl: 'https://example.com/olive-oil.jpg',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0946/5368/products/aaaa_1024x1024.png?v=1595357633',
         price: 6.00,
         listPrice: 7.00,
         isWeighable: false,
