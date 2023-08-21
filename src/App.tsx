@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Modal from './components/Modal';
 import { UserProvider } from './context/UserContext'
 import './styles/index.scss'
+import DiscountBanner from './components/DiscountBanner';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   return (
       <UserProvider>
         <Header />
+        <DiscountBanner />
         <Modal 
         isModalOpen={isModalOpen}
          setIsModalOpen={setIsModalOpen}
